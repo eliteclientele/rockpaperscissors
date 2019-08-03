@@ -3,8 +3,8 @@ const paper = "assets/paper.jpg";
 const scissors = "assets/scissors.jpg";
 const defaultImg = "assets/placeholder.png";
 
-const player01 = {};
-const player02 = {};
+let player01 = {};
+let player02 = {};
 
 let displayResult = document.getElementById('display-results');
 
@@ -58,8 +58,6 @@ function calcResults() {
     if(!(player01.selection && player02.selection)) {
         alert("both player must make a selection");
     }
-    console.log("player01: ", player01)
-    console.log("player02: ", player02)
     if ((player01.selection === 'Rock' && player02.selection === 'Scissors') || (player01.selection === 'Paper' && player02.selection === 'Rock') || (player01.selection === 'Scissors' && player02.selection === 'Paper')) {
         displayResult.textContent = `${player01.selection} beats ${player02.selection}. Player 1 wins`;
     }
@@ -67,10 +65,15 @@ function calcResults() {
     if ((player02.selection === 'Rock' && player01.selection === 'Scissors') || (player02.selection === 'Paper' && player01.selection === 'Rock') || (player02.selection === 'Scissors' && player01.selection === 'Paper')) {
         displayResult.textContent = `${player02.selection} beats ${player01.selection}. Player 2 wins`;
     }
+    else {
+        displayResult.textContent = "It's a draw";
+    }
 }
 
 function resetGame() {
     displayResult.textContent = '';
+    player01 = {};
+    player02 = {};
     document.querySelectorAll('img').forEach(elem => elem.src = defaultImg);
 }
 
