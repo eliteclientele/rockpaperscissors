@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+}
+
+#main-title {
+    color: rgb(155, 15, 15);
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+}
+
+img {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#player01, #player02 {
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+.button-grp {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #9b0f0f;
+    width: 100px;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#reset {
+    margin-top: 10px;
+}
