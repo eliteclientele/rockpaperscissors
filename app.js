@@ -37,18 +37,15 @@ function getSelection(evt) {
         placeholder.src = paper;
         if(player.id === 'player01') {
             player01.selection = 'Paper';
-            console.log(player01);
             return player01;
         } else {
             player02.selection = 'Paper';
-            console.log(player02)
             return player02;
         }
     } else {
         placeholder.src = scissors;
         if(player.id === 'player01') {
             player01.selection = 'Scissors';
-            console.log(player01);
             return player01;
         } else {
             player02.selection = 'Scissors';
